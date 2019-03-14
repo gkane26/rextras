@@ -1,0 +1,15 @@
+Package: rextras
+Type: Package
+Title: utility functions (mostly for ggplot)
+Version: 0.1.0
+Author: Gary Kane
+Maintainer: Gary Kane <gkane@alumni.princeton.edu>
+Description: Convenience functions
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends:
+  ggplot2
+Imports:
+  svDialogs
+RoxygenNote: 6.1.1
