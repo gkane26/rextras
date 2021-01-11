@@ -12,7 +12,7 @@
 #'
 #' @import ggplot2
 #' @export
-theme_abw <- function(big_font=12, small_font=10, grid=F, x_adjust=-.05, y_adjust=1, x_angle=0, legend=T){
+theme_abw <- function(big_font=14, small_font=12, grid=F, x_adjust=-0.5, y_adjust=2, x_angle=0, legend=T){
   if(x_angle > 0) x_hjust=1 else x_hjust=.5
 
   t = theme_bw() +

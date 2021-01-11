@@ -4,8 +4,15 @@
 \alias{theme_abw}
 \title{Custom ggplot theme, a modified theme_bw}
 \usage{
-theme_abw(big_font = 12, small_font = 10, grid = F,
-  x_adjust = -0.05, y_adjust = 1, x_angle = 0, legend = T)
+theme_abw(
+  big_font = 14,
+  small_font = 12,
+  grid = F,
+  x_adjust = -0.5,
+  y_adjust = 2,
+  x_angle = 0,
+  legend = T
+)
 }
 \arguments{
 \item{big_font}{int, default=12; axis and legend title font size}
