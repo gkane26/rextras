@@ -12,7 +12,15 @@
 #'
 #' @import ggplot2
 #' @export
-theme_abw <- function(big_font=14, small_font=12, grid=F, x_adjust=-0.5, y_adjust=2, x_angle=0, legend=T){
+theme_abw <- function(big_font=14,
+                      small_font=12,
+                      grid=F,
+                      x_adjust=-0.5,
+                      y_adjust=2,
+                      x_angle=0,
+                      legend=T,
+                      background=F,
+                      ...){
   if(x_angle > 0) x_hjust=1 else x_hjust=.5
 
   t = theme_bw() +
@@ -24,11 +32,21 @@ theme_abw <- function(big_font=14, small_font=12, grid=F, x_adjust=-0.5, y_adjus
           legend.text = element_text(size = small_font),
           strip.background = element_rect(fill = NA, color = NA),
           strip.text = element_text(size = small_font),
-          title = element_text(size = big_font))
+          title = element_text(size = big_font),
+          plot.title = element_text(size = big_font, hjust = 0.5))
 
   if(!grid) t = t + theme(panel.grid = element_blank())
 
   if(!legend) t = t + theme(legend.position = "none")
+
+  if(!background) t = t + theme(legend.background = element_blank(),
+                                legend.box.background = element_blank(),
+                                panel.background = element_blank(),
+                                plot.background = element_blank(),
+                                strip.background.x = element_blank(),
+                                strip.background.y = element_blank())
+
+  t = t + theme(...)
 
   return(t)
 }
